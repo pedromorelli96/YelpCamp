@@ -6,7 +6,7 @@
 
 ## 📁 Access the project
 
-<!-- ### Check it out here: [Click this link to see the project in action](https://grand-lily-5296d1.netlify.app/) -->
+### Check it out here: [Click this link to see the project in action](https://yelpcamp-uug3.onrender.com/)
 
 ## ✔️ Key learnings
 
