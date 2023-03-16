@@ -47,8 +47,8 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(mongoSanitize());
 
 const store = new MongoDBStore({
-    url: "mongodb://127.0.0.1:27017/yelp-camp",
-    secret: "thisshouldbeabettersecret!",
+    url: dbUrl,
+    secret: process.env.SECRET,
     touchAfter: 24 * 60 * 60, // 24 hours
 });
 
@@ -59,7 +59,7 @@ store.on("error", function (e) {
 const sessionConfig = {
     store,
     name: "session",
-    secret: "thisshouldbeabettersecret!",
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,
     cookie: {
